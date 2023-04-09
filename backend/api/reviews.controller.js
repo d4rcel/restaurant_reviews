@@ -32,7 +32,7 @@ export default class ReviewsController {
       const reviewResponse = await ReviewsDAO.updateReview(
         reviewId,
         req.body.user_id,
-        review,
+        text,
         date
       );
       var { error } = reviewResponse;
@@ -66,4 +66,5 @@ export default class ReviewsController {
       res.status(500).json({ error: e.message });
     }
   }
+
 }
